@@ -1,0 +1,17 @@
+.iblog-post-heading {
+    font-size: 56px;
+    font-weight: bold;
+    color: rgba(212, 163, 115, 1);
+    margin-top: 5rem;
+}
+
+.iblog-post-paragraph {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.iblog-post-img-wrapper {
+    height: 550px;
+    width: 100%;
+    margin: 1rem 0;
+}

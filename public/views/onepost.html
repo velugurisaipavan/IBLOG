@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    Bootstrap    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--    custom font   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>IBlog Website</title>
+</head>
+<body>
+<header class="iblog-header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light iblog-navbar">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                    aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#"><span class="logo-distinct">I</span>Blog</a>
+            <div class="collapse justify-content-between navbar-collapse" id="navbarTogglerDemo03">
+                <ul id="navbar_nav" class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+                <div id="iblog_navbar_btns" class="iblog-navbar-btns d-flex align-items-center justify-content-between w-20">
+                    <a href="/login" class="btn btn-outline-light" type="submit">Log In</a>
+                    <a href="/signup" class="text-light btn btn-outline-secondary">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="iblog-header-showcase">
+        <div class="container-fluid">
+            <div class="showcase-wrapper">
+                <h3 class="showcase-heading">
+                    Think, Plan and Write your thoughts as World listens to you!
+                </h3>
+                <p class="showcase-paragraph">
+                    Every one over six people around World complain about no one listens to them
+                </p>
+            </div>
+        </div>
+    </section>
+</header>
+<main class="iblog-main">
+    <section class="iblog-post-content mt-5">
+        <div id="one_post_parent" class="container">
+
+        </div>
+
+    </section>
+    <section class="iblog-chosen-posts">
+        <div class="container">
+            <h3 class="section-heading mb-4">Editor’s Pick</h3>
+            <div class="chosen-posts-wrapper">
+                <div id="chosen_post_list" class="row gx-3">
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>
+<footer class="iblog-footer">
+    <div class="container">
+        <div class="row gx-2">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="column-container">
+                    <h4 class="footer-heading">Contact the Publisher</h4>
+                    <a href="#" class="column-link showcase-paragraph">iblog@info.gmail.com</a>
+                    <p class="showcase-paragraph">+ 1 223 345 43 45</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="column-container">
+                    <h4 class="footer-heading">Explore</h4>
+                    <a href="#" class="column-link showcase-paragraph">About</a>
+                    <a href="#" class="column-link showcase-paragraph">Partners</a>
+                    <a href="#" class="column-link showcase-paragraph">Job Opportunity</a>
+                    <a href="#" class="column-link showcase-paragraph">Advertise</a>
+                    <a href="#" class="column-link showcase-paragraph">Membership</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="column-container">
+                    <h4 class="footer-heading">Headquarters</h4>
+                    <p class="showcase-paragraph">191 Middleville</p>
+                    <p class="showcase-paragraph"> Road,
+                        NY 1001, </p>
+                    <p class="showcase-paragraph">Sydney
+                        Australia</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- CREATE POST MODAL -->
+<div class="modal fade create-post-modal" tabindex="-1"
+     role="dialog"
+     id="create_post_modal">
+    <div class="modal-dialog w-75" role="document">
+        <form id="create_post_form" class="modal-content rounded-5 shadow">
+            <div class="modal-header p-5 pb-4 border-bottom-0">
+                <!-- <h5 class="modal-title">Modal title</h5> -->
+                <h2 class="fw-bold mb-0">What is happening? Write it...</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-5 pt-0">
+                <div id="post_error" class=" text-danger"></div>
+                <div class="input-group mb-3">
+                    <input type="file" class="form-control" id="photo" name="photo" required accept="image/jpeg, image/png, image/svg">
+                    <label class="input-group-text" for="photo">Upload post photo</label>
+                </div>
+                <div class="form-group mb-3">
+                    <input type="text" name="category_name" class="form-control me-2" id="category_name"
+                           placeholder="Enter category for your post...">
+                </div>
+                <div class="form-floating mb-3">
+                        <textarea type="text" class="form-control rounded-4" id="title" name="title" placeholder="Title for your post..."
+                                  style="height: 100px" required>
+                        </textarea>
+                    <label for="title">Title for your post</label>
+                </div>
+                <div class="form-floating mb-3">
+                        <textarea type="text" class="form-control rounded-4" id="content" name="content" placeholder="Post content" style="height:
+                        250px" required>
+                        </textarea>
+                    <label for="content">Content</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button class="btn btn-success" type="submit">Post</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="module" src="scripts/main.js"></script>
+<script type="module" src="scripts/posts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

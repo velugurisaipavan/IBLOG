@@ -1,0 +1,14 @@
+/* VARAIBLES */
+:root {
+    --fs-nav-link: 14px;
+    --fw-nav-link: 700;
+    --fc-nav-link: #E5E5E5;
+    /*    NAV BRAND LOGO  */
+    --fc-nav-logo: #F8F9FA;
+    --fw-nav-logo: 700;
+    --fs-nav-logo: 20px;
+    --heading-size: 36px;
+    --heading-color: #fff;
+    --paragraph-size: 14px;
+    --subheading-size: 28px;
+}

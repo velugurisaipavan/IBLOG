@@ -1,0 +1,259 @@
+@import "variabless.css";
+@import "signup.css";
+@import "login.css";
+@import "onepost.css";
+@import "dashboard.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-link {
+    cursor: pointer !important;
+}
+
+/* CREATE MODAL CSS CUSTOMIZATION*/
+.create-post-modal .modal-dialog {
+    max-width: 75% !important;
+}
+
+/* IBLOG CONTAINER */
+.iblog-container {
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.iblog-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* HEADER */
+.iblog-header {
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+    background: url("/images/header_bg.jpg") no-repeat center center;
+}
+
+/* Navbar */
+.iblog-navbar {
+    padding: 1.2rem 0;
+    background: rgba(0, 0, 0, 0.3) !important;
+}
+
+.iblog-navbar .nav-link {
+    color: var(--fc-nav-link, #fff) !important;
+    font-size: var(--fs-nav-link) !important;
+    font-weight: var(--fw-nav-link) !important;
+}
+
+.iblog-navbar .navbar-brand {
+    color: var(--fc-nav-logo) !important;
+    font-size: var(--fs-nav-logo);
+    font-weight: var(--fw-nav-logo) ;
+    text-transform: uppercase;
+}
+
+.logo-distinct {
+    color: steelblue;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 0;
+}
+
+.iblog-navbar .navbar-nav {
+    width: 85% !important;
+    justify-content: center;
+}
+
+.iblog-navbar-btns {
+    width: 14%;
+}
+
+.iblog-header-showcase {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.showcase-wrapper {
+    width: 45%;
+}
+
+.showcase-heading {
+    font-size: var(--heading-size);
+    color: var(--heading-color);
+}
+
+.showcase-paragraph {
+    color: #E5E5E5;
+    font-size: var(--paragraph-size);
+    margin-bottom: 0;
+}
+
+/* IBLOG POST SECTION   */
+.section-heading {
+    font-weight: 700;
+    font-size: var(--subheading-size);
+}
+
+.post-list {
+    margin-top: 2rem;
+}
+
+.post-list .card {
+    position: relative;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.6s ease;
+}
+
+.post-list .card .category-label {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+
+}
+
+.post-list .card:hover {
+    text-decoration: underline;
+}
+
+.post-list .card .card-img-top .iblog-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.post-list .card .card-img-top {
+    position: relative;
+}
+.post-list .card .card-img-top .card-category{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.post-list .card .card-body {
+    padding: 1rem 0.1rem;
+}
+
+.post-list .card .card-title {
+    font-weight: 700 !important;
+}
+
+.post-list .card .card-text {
+    font-size: 14px !important;
+}
+
+
+
+/* IBLOG SECOND SECTION */
+.iblog-second-section {
+    height: 500px;
+    width: 100%;
+    background: url("/images/bg_image2.png") center center no-repeat ;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.second-section-content-wrapper {
+    width: 50%;
+}
+
+.category-label {
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    padding: 0.1rem 1rem;
+    text-transform: uppercase;
+}
+
+.iblog-chosen-posts {
+    padding: 4rem 0;
+}
+
+.chosen-post {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 300px !important;
+}
+
+.chosen-post-img-wrapper {
+    width: 100%;
+    height: 100% !important;
+}
+
+.chosen-post:hover .chosen-post-content {
+    opacity: 1;
+}
+
+.chosen-post-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(52, 58, 64, 0.4);
+    opacity: 0;
+    width: fit-content;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    transition: all 0.6s ease;
+}
+
+.chosen-post-content .content-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.chosen-post-content .content-paragraph {
+    font-size: 12px;
+}
+
+.chosen-post-content .category-label {
+    align-self: flex-end;
+}
+
+/* FOOTER */
+.iblog-footer {
+    height: 300px;
+    background: #212529 ;
+    display: flex;
+    align-items: center;
+}
+
+.footer-heading {
+    font-weight: bold;
+    color: var(--heading-color);
+}
+
+.column-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem 0;
+}
+
+.column-link {
+    text-decoration: none;
+}
+
+.column-link:hover {
+    color: #E5E5E5;
+}
